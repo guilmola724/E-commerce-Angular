@@ -11,6 +11,7 @@ The backend code and some Angular business logic are private, but if you like th
 ## Angular Features
 - Clean **Routing** design with guards
 - **Lazy Loading** for fast application bootstrap
+- Products **Pagination**
 - **RXJS**
 - Modern design with **Standalone Components** (no ngModule approach)
 - **Firebase** for product images **upload** by the admin
@@ -21,6 +22,7 @@ The backend code and some Angular business logic are private, but if you like th
 - **DTO/Model/Entity/Resource** design
 - **Spring Security** for authentication
 - **Input validation**
+- Products **Pagination**
 - **Stripe** integration for handling payment in **test mode**
 - **MySQL** database storing: user data, session, cart, products, orders, ...
 - **Robust exception handling**
