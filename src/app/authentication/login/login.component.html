@@ -1,0 +1,36 @@
+<h1>Login</h1>
+
+<section
+    *ngIf="error.messageList.length !== 0"
+    class="alert">
+        <h2>{{ error.title }}</h2>
+        <p *ngFor="let errorMessage of error.messageList">{{ errorMessage }}</p>
+</section>
+
+<section *ngIf="appState.isSigningUp()"
+    class="alert singup-successful">
+        <h2>Congratulations!</h2>
+        <p>Your account was created successfully. Now you can login with your credentials!</p>
+</section>
+
+<form
+    [formGroup]="loginForm"
+    (submit)="onSubmit()">
+        <p>
+            <label for="email">E-Mail</label>
+            <input formControlName="email" type="text" id="email">  
+        </p>
+
+        <p>
+            <label for="password">Password</label>
+            <input formControlName="password" type="password" id="password">  
+        </p>
+
+        <button class="btn">
+            Login
+        </button>
+
+        <p id="switch-form">
+            <a routerLink="/signup">Create a new user</a>
+        </p>
+</form>

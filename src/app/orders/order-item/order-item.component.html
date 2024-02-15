@@ -1,0 +1,56 @@
+<article class="order-item" [attr.data-order-id]="order.getOrderId()">
+    <header class="order-summary">
+      <h2 class="order-item-header">
+        <span class="order-item-price">{{ order.getTotalPrice() | formatPrice }}</span>
+        <span>{{ order.getFormattedDate() }} - {{ order.getFormattedTime() }}</span>
+      </h2>
+      <p><span class="badge">{{ order.getStatus().toLocaleUpperCase() }}</span></p>
+      <p><span class="order-number">N. {{ order.getOrderNumber() }}</span></p>
+    </header>
+  
+    <section class="order-details">
+        <address *ngIf="appState.isUserAdmin()">
+          <p>
+            <a href="mailto:{{ order.getUserData().getEmail() }}">{{ order.getUserData().getEmail() }}</a>
+          </p>
+          <p class="address">
+            <span>{{ order.getUserData().getAddress().getStreet() }}</span>
+            <span class="separator">-</span>
+            <span>{{ order.getUserData().getAddress().getPostalCode() }}</span>
+            <span class="separator">-</span>
+            <span>{{ order.getUserData().getAddress().getCity() }}</span>
+          </p>
+        </address>
+
+        <ul>
+          <li *ngFor="let cartItem of order.getCart()" class="cart-item-info">
+              <span class="product-title">{{ cartItem.getProduct().getTitle() }}</span>
+              <span>{{ cartItem.getTotalPrice() | formatPrice }} ({{ cartItem.getProduct().getPrice() | formatPrice }} x {{ cartItem.getQuantity() }})</span>
+          </li>
+        </ul>
+    </section>
+  
+    <section
+        *ngIf="appState.isUserAdmin()"
+        class="order-actions">
+            <form id="update-quantity">
+                <select name="status"
+                    #selectStatusRef>
+                    <option [selected]="hasStatus('pending')" [value]="'pending'">
+                        Pending
+                    </option>
+
+                    <option [selected]="hasStatus('fulfilled')" [value]="'fulfilled'">
+                        Fulfilled
+                    </option>
+
+                    <option [selected]="hasStatus('cancelled')" [value]="'cancelled'">
+                        Cancelled
+                    </option>
+                </select>
+
+                <button type="button" class="btn btn-alt" (click)="updateStatus(selectStatusRef.value)">Update</button>
+            </form>
+    </section>
+
+  </article>

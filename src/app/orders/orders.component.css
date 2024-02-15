@@ -1,0 +1,8 @@
+h1 {
+    font-size: var(--main-title-size);
+}
+
+#zero-orders {
+    font-size: 1.5rem;
+    color: var(--color-primary-500);
+}

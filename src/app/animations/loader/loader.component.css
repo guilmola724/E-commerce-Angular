@@ -1,0 +1,26 @@
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: rgb(31, 26, 22, 0.7); */
+  background-color: rgb(31, 26, 22, 0.4);
+  z-index: 2;
+}
+
+#main-loader {
+    margin: 7rem auto;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 15rem;
+}
+
+@media (min-width: 768px) {
+    #main-loader {
+      border-width: 7px;
+      border-top-width: 7px;
+      width: 5rem;
+      height: 5rem;
+    }
+  }

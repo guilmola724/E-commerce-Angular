@@ -1,0 +1,68 @@
+<h1>{{ getPageHeader() }}</h1>
+
+<section
+    *ngIf="error.messageList.length !== 0"
+    class="alert">
+        <h2>{{ error.title }}</h2>
+        <p *ngFor="let errorMessage of error.messageList">{{ errorMessage }}</p>
+</section>
+
+<form
+    [formGroup]="productForm"
+    (submit)="onSubmit()">
+
+    <p>
+        <label for="title">Title</label>
+        <input
+            type="text"
+            id="title"
+            formControlName="title">
+    </p>
+
+    <div id="image-upload-control">
+        <p>
+            <label for="image">Image</label>
+            <input
+                (input)="createImagePreview()"
+                type="file"
+                id="image"
+                accept="image/jpeg, image/png"
+                formControlName="image"
+                #fileInputRef>
+        </p>
+        <img *ngIf="imageLocalUrl"
+            [src]="imageLocalUrl"
+            alt="Your selected image">
+    </div>
+
+    <p>
+        <label for="summary">Summary</label>
+        <input
+            type="text"
+            id="summary"
+            formControlName="summary">
+    </p>
+
+    <p>
+        <label for="price">Price ($)</label>
+        <input type="text"
+            id="price"
+            step="0.01"
+            formControlName="price">
+    </p>
+
+    <p>
+        <label for="description">Description</label>
+        <textarea
+                id="description"
+                rows="7"
+                formControlName="description">
+        </textarea>
+    </p>
+
+    <p class="form-buttons">
+        <button type="button" class="btn btn-alt" (click)="resetValues()">Reset</button>
+        <button type="submit" class="btn">Save</button>
+    </p>
+
+</form>

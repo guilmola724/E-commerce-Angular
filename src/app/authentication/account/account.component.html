@@ -1,0 +1,11 @@
+<h1 *ngIf="appState.isUserAdmin()">Admin</h1>
+<h1 *ngIf="!appState.isUserAdmin()">User</h1>
+
+<b>{{ appState.getUserData().getFullName() }}</b>
+<p>{{ appState.getUserData().getEmail() }}</p>
+
+<div class="h-line"></div>
+
+<p>{{ appState.getUserData().getAddress().getStreet() }}</p>
+<p>{{ appState.getUserData().getAddress().getPostalCode() }}</p>
+<p>{{ appState.getUserData().getAddress().getCity() }}</p>

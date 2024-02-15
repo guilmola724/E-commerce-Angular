@@ -1,0 +1,50 @@
+<ul class="nav-items"
+    [ngClass]="{'mobile-menu': isMobileMenu}">
+
+    <li *ngIf="!appState.isMobileMenuOpen()">
+        <button (click)="closeMobileMenu(); back()" id="back-arrow-btn">
+            <app-back-arrow-icon></app-back-arrow-icon>
+        </button>
+    </li>
+
+    <li *ngIf="!appState.isUserAdmin()">
+        <a routerLink="/" (click)="closeMobileMenu()">
+            Shop
+        </a>
+    </li>
+    <li *ngIf="!appState.isUserAdmin()">
+        <a class="cart-actions" routerLink="/cart" (click)="closeMobileMenu()">
+            <span>Cart</span>
+            <span id="cart-items-number" class="badge">{{ appState.getCartLength() }}</span>
+        </a>
+    </li>
+
+    <li *ngIf="appState.isUserAuth() && !appState.isUserAdmin()">
+        <a routerLink="/orders" (click)="closeMobileMenu()">Orders</a>
+    </li>
+
+    <li *ngIf="appState.isUserAdmin()">
+        <a routerLink="/" (click)="closeMobileMenu()">Manage Products</a>
+    </li>
+    <li *ngIf="appState.isUserAdmin()">
+        <a routerLink="/orders" (click)="closeMobileMenu()">Manage Orders</a>
+    </li>
+
+    <li *ngIf="!appState.isUserAuth()">
+        <a routerLink="/signup" (click)="closeMobileMenu()">Signup</a>
+    </li>
+    <li *ngIf="!appState.isUserAuth()" class="last-item">
+        <a routerLink="/login" (click)="closeMobileMenu()">Login</a>
+    </li>
+
+    <li *ngIf="appState.isUserAuth()">
+        <a routerLink="/account" (click)="closeMobileMenu()">Account</a>
+    </li>
+
+    <li *ngIf="appState.isUserAuth()" class="last-item">
+        <form>
+            <button type="button" (click)="closeMobileMenu(); logout();">Logout</button>
+        </form>
+    </li>
+
+</ul>

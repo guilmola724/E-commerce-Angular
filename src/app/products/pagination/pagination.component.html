@@ -1,0 +1,19 @@
+<ol *ngIf="maxPage > 1" id="pages">
+    
+    <li *ngIf="currentPage > 1">
+        <a id="arrow" routerLink="/products" [queryParams]="getPageQueryParam(currentPage - 1)">{{ '\<' }}</a>
+    </li>
+
+    <li *ngFor="let n of getArrayOfPages(); let i = index">
+
+            <span *ngIf="(i + 1) === currentPage" class="btn btn-alt"> {{ i + 1 }} </span>
+
+            <a *ngIf="(i + 1) !== currentPage" class="btn" routerLink="/products" [queryParams]="getPageQueryParam(i + 1)">{{ i + 1 }}</a>
+
+    </li>
+
+    <li *ngIf="currentPage < maxPage">
+        <a id="arrow" routerLink="/products" [queryParams]="getPageQueryParam(currentPage + 1)">{{ '\>' }}</a>
+    </li> 
+
+</ol>

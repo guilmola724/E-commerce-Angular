@@ -1,0 +1,21 @@
+<h1 *ngIf="!appState.isUserAdmin()">{{ title}}</h1>
+
+<section *ngIf="appState.isUserAdmin()">
+    <h2>Manage Products</h2>
+    <p>
+        <a routerLink="/products/new" class="btn">Add Product</a>
+    </p>
+</section>
+
+<section *ngIf="!appState.getProductList().length && !appState.isUserAdmin()">
+    Products will be added soon!
+</section>
+
+<section *ngIf="appState.getProductList().length">
+    <ul id="products-grid">
+        <li *ngFor="let product of appState.getProductList()">
+            <app-product-item [product]="product"></app-product-item>
+        </li>
+    </ul>
+    <app-pagination></app-pagination>
+</section>

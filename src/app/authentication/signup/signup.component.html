@@ -1,0 +1,54 @@
+<h1>Create New Account</h1>
+
+<section
+    *ngIf="error.messageList.length !== 0"
+    class="alert">
+        <h2>{{ error.title }}</h2>
+        <p *ngFor="let errorMessage of error.messageList">{{ errorMessage }}</p>
+</section>
+
+<form [formGroup]="signupForm"
+    (submit)="onSubmit()">
+        <p>
+            <label for="email">E-Mail</label>
+            <input formControlName="email" type="text" id="email" >  
+        </p>
+
+        <p>
+            <label for="confirm-email">Confirm E-Mail</label>
+            <input formControlName="confirm-email" type="text" id="confirm-email">  
+        </p>
+
+        <p>
+            <label for="password">Password</label>
+            <input formControlName="password" type="password" id="password">  
+        </p>
+
+        <hr>
+
+        <p>
+            <label for="fullname">Full Name</label>
+            <input formControlName="fullname" type="text" id="fullname">  
+        </p>
+
+        <p>
+            <label for="street">Street</label>
+            <input formControlName="street" type="text" id="street">  
+        </p>
+
+        <p>
+            <label for="postal">Postal Code</label>
+            <input formControlName="postal" type="text" id="postal">  
+        </p>
+
+        <p>
+            <label for="city">City</label>
+            <input formControlName="city" type="text" id="city">  
+        </p>
+
+        <button class="btn" type="submit">Create Account</button>
+
+        <p id="switch-form">
+            <a routerLink="/login">Login instead</a>
+        </p>
+</form>

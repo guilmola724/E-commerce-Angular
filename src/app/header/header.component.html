@@ -1,0 +1,39 @@
+<div class="header-container">
+    <header id="main-header">
+
+        <div id="logo"><a href="/">Demo</a></div>
+
+        <nav *ngIf="appState.isInitDone()">
+            <app-navigation-items [isMobileMenu]="false"></app-navigation-items>
+        </nav>
+
+        <div class="mobile-actions">
+            <button [ngStyle]="{'margin-right': getMobileActionButtonsMargin()}"
+                (click)="closeMobileMenu(); back()"
+                id="back-arrow-btn">
+                <app-back-arrow-icon></app-back-arrow-icon>
+            </button>
+            <div [ngStyle]="{'margin-right': getMobileActionButtonsMargin()}"
+                *ngIf="!appState.isUserAdmin() && appState.getCartLength() !== 0 && !appState.isMobileMenuOpen()">
+                <a class="badge"
+                    routerLink="/cart">
+                    {{ appState.getCartLength() }}
+                </a>
+            </div>
+            <button id="mobile-menu-btn"
+                (click)="toggleMobileMenu(mobileMenuElement)">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+    </header>
+</div>
+<aside id="mobile-menu"
+    [ngClass]="{'open': appState.isMobileMenuOpen()}"
+    #mobileMenuElement>
+        <nav>
+            <app-navigation-items [isMobileMenu]="true"></app-navigation-items>
+        </nav>
+</aside>

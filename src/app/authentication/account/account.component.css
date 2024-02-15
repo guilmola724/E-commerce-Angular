@@ -1,0 +1,18 @@
+.h-line {
+    width: 50%;
+    height: 0rem;
+    border-bottom: 1px solid var(--color-primary-500);
+    margin: 0 auto;
+}
+
+p, b {
+    display: block;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: larger;
+}
+
+h1 {
+    font-weight: lighter;
+    text-align: center;
+}

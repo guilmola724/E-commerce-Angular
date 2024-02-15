@@ -1,0 +1,26 @@
+<a [routerLink]="appState.isUserAdmin() ? null : ['/products', product.getProductId()]"
+    [ngStyle]="{cursor: getCursorStyle()}">
+
+    <article class="product-item" [attr.data-product-id]="product.getProductId()">
+        <img [src]="product.getImageUrl()">
+
+        <div class="product-item-content">
+            <p>{{ product.getPrice() | formatPrice }}</p>
+            <h2>{{ product.getTitle() }}</h2>
+            <div>
+    
+                <div *ngIf="appState.isUserAdmin()"
+                    class="product-item-actions">
+                        <a [routerLink]="['/products', product.getProductId(), 'edit']">
+                            <app-edit-icon-component></app-edit-icon-component>
+                        </a>
+                        <button class="product-item-delete" (click)="deleteProduct()">
+                            <app-delete-icon-component></app-delete-icon-component>
+                        </button>
+                </div>
+                
+            </div>
+        </div>
+    </article>
+
+</a>

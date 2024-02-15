@@ -1,0 +1,113 @@
+.header-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#main-header {
+    width: 90%;
+    max-width: 50rem;
+    height: 5rem;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-primary-500);
+    background-color: var(--color-gray-500);
+  }
+  
+  #logo {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  #main-header nav {
+    display: none;
+  }
+
+  #mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: none;
+    cursor: pointer;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #mobile-menu-btn span {
+    width: 2.25rem;
+    height: 0.2rem;
+    background-color: var(--color-gray-100);
+  }
+  
+  #mobile-menu {
+    position: fixed;
+    /* from top must be placed right under the header */
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    /* height covers all the viewport available under the header */
+    height: calc(100vh - 5rem);
+    background-color: var(--color-gray-700);
+    /* default flex properties for mobile view (will be over-written for desktop) */
+    /* display --> flex in JS */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* this selector targets the element which have this id and this class at the same time */
+  #mobile-menu.open {
+    z-index: 1;
+    display: flex;
+  }
+  
+  #mobile-menu nav {
+    height: 20rem;
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  #back-arrow-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  @media (min-width: 480px) {
+    .mobile-actions {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+
+    /* hide burger button */
+    .mobile-actions {
+      display: none;
+    }
+
+    /* show nav items */
+    #main-header nav {
+      display: block;
+    }
+
+    /* hide mobile menu (aside) */
+    #mobile-menu {
+      display: none;
+    }
+  
+  }

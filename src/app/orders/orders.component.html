@@ -1,0 +1,12 @@
+<h1>Manage Orders</h1>
+
+<ul>
+    <li *ngFor="let order of appState.getOrderList()">
+        <app-order-item [order]="order"></app-order-item>
+    </li>
+</ul>
+
+<div id="zero-orders" *ngIf="appState.getOrderList().length === 0">
+    <p *ngIf="appState.isUserAdmin()">Customers did not place any order yet...</p>
+    <p *ngIf="!appState.isUserAdmin()">You did not place any order yet...</p>
+</div>

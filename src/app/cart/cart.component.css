@@ -1,0 +1,29 @@
+h1 {
+    font-size: var(--main-title-size);
+}
+
+#cart-total {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+#cart-total p {
+    font-size: 1.5rem;
+    color: var(--color-primary-500);
+    margin: 0 0 1rem 0;
+}
+
+#cart-total #cart-total-fallback,
+#cart-total #cart-empty-fallback {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+@media (min-width: 768px) {
+
+    #cart-total {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

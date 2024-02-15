@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+    color: var(--color-gray-300);
+    font-size: var(--main-title-size);
+}
+
+form {
+    max-width: 25rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: var(--color-gray-600);
+    border-radius: 6px;
+    text-align: center;
+}
+
+form a {
+    color: var(--color-primary-200);
+}
+
+form a:hover,
+form a:active {
+    color: var(--color-primary-400);
+}
+
+input.ng-touched.ng-invalid {
+    border-color: red
+}
+
+.alert.singup-successful {
+    background-color: rgb(135, 233, 161);
+    color: var(--color-gray-500);
+}

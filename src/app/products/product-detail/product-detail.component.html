@@ -1,0 +1,15 @@
+<section id="product-details">
+
+    <header>
+        <img [src]="product.getImageUrl()">
+        <div id="product-info">
+            <h1>{{ product.getTitle() }}</h1>
+            <button class="btn" (click)="saveCartItem(1, 'yes')">Add to Cart</button>
+            <p>{{ product.getPrice() | formatPrice }}</p>
+            <p>{{ product.getSummary() }}</p>
+        </div>
+    </header>
+
+    <p id="product-description">{{ product.getDescription() }}</p>
+
+</section>

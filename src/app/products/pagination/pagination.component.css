@@ -1,0 +1,32 @@
+#pages {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    overflow: auto;
+    height: 5rem;
+  }
+
+  #pages a {
+    color: var(--color-primary-500-contrast);
+  }
+  
+  #pages span:hover {
+    background-color: transparent;
+    cursor: auto;
+  }
+  
+  #pages #arrow {
+    padding: 0 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary-500);
+  }
+
+  @media(min-width: 768px) {
+    #pages {
+      justify-content: center;
+    }
+  }

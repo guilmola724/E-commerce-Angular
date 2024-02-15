@@ -1,0 +1,33 @@
+<h1>Your Cart</h1>
+
+<section
+    *ngIf="error.messageList.length !== 0"
+    class="alert">
+        <h2>{{ error.title }}</h2>
+        <p *ngFor="let errorMessage of error.messageList">{{ errorMessage }}</p>
+</section>
+
+<ul id="cart-items">
+    <li *ngFor="let cartItem of appState.getShoppingCart().getCart()">
+        <app-cart-item [cartItem]="cartItem"></app-cart-item>
+    </li>
+</ul>
+
+<div id="cart-total">
+    
+    <p>Total: <span>{{ appState.getShoppingCart().getTotalPrice() | formatPrice}}</span></p>
+
+    <form *ngIf="appState.isUserAuth() && appState.getShoppingCart().getCart().length > 0">
+        <button type="button" class="btn" (click)="placeOrder()">Buy Products</button>
+    </form>
+
+    <p *ngIf="!appState.isUserAuth() && appState.getShoppingCart().getCart().length > 0"
+        id="cart-total-fallback">
+            <a routerLink="/login">Login to purchase the products!</a>
+    </p>
+
+    <p id="cart-empty-fallback" *ngIf="appState.getShoppingCart().getCart().length === 0">
+        Your cart is empty...
+    </p>
+
+</div>
