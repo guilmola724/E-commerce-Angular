@@ -38,6 +38,7 @@ The backend code and some Angular business logic are private, but if you like th
 | ![Orders mobile view](assets/github/mobile-views/5.mobile-orders.JPG?raw=true) | ![Menu mobile view](assets/github/mobile-views/2.mobile-menu.JPG?raw=true) | ![Account mobile view](assets/github/mobile-views/6.mobile-account.JPG?raw=true)
 
 ## Desktop Views
-
-
+| ![Products desktop view](assets/github/desktop-views/1.desktop-products.JPG?raw=true) | ![Product detail desktop view](assets/github/desktop-views/2.desktop-product-detail.JPG?raw=true) |
+| ------------- | ------------- |
+| ![Cart desktop view](assets/github/desktop-views/3.desktop-cart.JPG?raw=true) | ![Orders desktop view](assets/github/desktop-views/4.desktop-orders.JPG?raw=true) |
 
