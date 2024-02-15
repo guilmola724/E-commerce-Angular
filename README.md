@@ -9,8 +9,12 @@ This is a **fullstack** application where the frontend was built with **Angular 
 
 **<ins>NOTE</ins>**: To execute a payment in test mode, please use this test card number: 4242424242424242 (for more informations please check the Stripe docs: https://docs.stripe.com/checkout/quickstart).
 
-
 The backend code and some Angular business logic are private, but if you like the project and are interested in helping me maintaining it and building new features, please feel free to contact me so that we can have a chat about it.
+
+## Mobile views
+| ![Products mobile view](assets/github/mobile-views/1.mobile-products.JPG?raw=true) | ![Product detail mobile view](assets/github/mobile-views/3.mobie-product-detail.JPG?raw=true) |![Cart mobile view](assets/github/mobile-views/4.mobile-cart.JPG?raw=true) |
+| ------------- | ------------- |------------- |
+| ![Orders mobile view](assets/github/mobile-views/5.mobile-orders.JPG?raw=true) | ![Menu mobile view](assets/github/mobile-views/2.mobile-menu.JPG?raw=true) | ![Account mobile view](assets/github/mobile-views/6.mobile-account.JPG?raw=true)
 
 ## Angular Features
 - Clean **Routing** design with guards
@@ -32,13 +36,13 @@ The backend code and some Angular business logic are private, but if you like th
 - **Robust exception handling**
 - **Robust cart management** in the user session, ensuring **cart integrity** when user logs in/out
 
-## Mobile views
-| ![Products mobile view](assets/github/mobile-views/1.mobile-products.JPG?raw=true) | ![Product detail mobile view](assets/github/mobile-views/3.mobie-product-detail.JPG?raw=true) |![Cart mobile view](assets/github/mobile-views/4.mobile-cart.JPG?raw=true) |
-| ------------- | ------------- |------------- |
-| ![Orders mobile view](assets/github/mobile-views/5.mobile-orders.JPG?raw=true) | ![Menu mobile view](assets/github/mobile-views/2.mobile-menu.JPG?raw=true) | ![Account mobile view](assets/github/mobile-views/6.mobile-account.JPG?raw=true)
-
 ## Desktop Views
 | ![Products desktop view](assets/github/desktop-views/1.desktop-products.JPG?raw=true) | ![Product detail desktop view](assets/github/desktop-views/2.desktop-product-detail.JPG?raw=true) |
 | ------------- | ------------- |
 | ![Cart desktop view](assets/github/desktop-views/3.desktop-cart.JPG?raw=true) | ![Orders desktop view](assets/github/desktop-views/4.desktop-orders.JPG?raw=true) |
+
+## Admin Portal Views
+| ![Products admin view](assets/github/admin-views/3.admin-update-product.JPG?raw=true) | ![Add new product admin view](assets/github/admin-views/2.admin-add-new-product.JPG?raw=true) |
+| ------------- | ------------- |
+| ![Edit product admin view](assets/github/admin-views/3.admin-update-product.JPG?raw=true) | ![Orders admin view](assets/github/admin-views/4.admin-update-orders.JPG?raw=true) |
 
