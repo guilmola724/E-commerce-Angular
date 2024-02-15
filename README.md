@@ -42,7 +42,7 @@ The backend code and some Angular business logic are private, but if you like th
 | ![Cart desktop view](assets/github/desktop-views/3.desktop-cart.JPG?raw=true) | ![Orders desktop view](assets/github/desktop-views/4.desktop-orders.JPG?raw=true) |
 
 ## Admin Portal Views
-| ![Products admin view](assets/github/admin-views/3.admin-update-product.JPG?raw=true) | ![Add new product admin view](assets/github/admin-views/2.admin-add-new-product.JPG?raw=true) |
+| ![Products admin view](assets/github/admin-views/1.admin-products.JPG?raw=true) | ![Add new product admin view](assets/github/admin-views/2.admin-add-new-product.JPG?raw=true) |
 | ------------- | ------------- |
 | ![Edit product admin view](assets/github/admin-views/3.admin-update-product.JPG?raw=true) | ![Orders admin view](assets/github/admin-views/4.admin-update-orders.JPG?raw=true) |
 
