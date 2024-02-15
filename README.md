@@ -27,7 +27,7 @@ The backend code and some Angular business logic are private, but if you like th
 - **Spring Security** for authentication
 - **Input validation**
 - Products **Pagination**
-- **Stripe** integration for handling payment in **test mode**
+- Integration with **Stripe API** for handling payment in **test mode**
 - **MySQL** database storing: user data, session, cart, products, orders, ...
 - **Robust exception handling**
 - **Robust cart management** in the user session, ensuring **cart integrity** when user logs in/out
