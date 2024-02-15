@@ -1,4 +1,4 @@
-## Try this Videogames Ecommerce Demo [<ins>Here</ins>](https://ecommerce-demo.lullabydevhub.com/)!
+## Try this Videogames Ecommerce Website [<ins>Here</ins>](https://ecommerce-demo.lullabydevhub.com/)!
 
 **Responsive** Ecommerce website - Navigate between product pages and add the games you wish to buy to your **cart**. 
 To buy the products in **test** mode first create an **account**, perform the login and then place the **order**.
