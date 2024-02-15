@@ -32,5 +32,12 @@ The backend code and some Angular business logic are private, but if you like th
 - **Robust exception handling**
 - **Robust cart management** in the user session, ensuring **cart integrity** when user logs in/out
 
+## Mobile views
+| ![Products mobile view](assets/github/mobile-views/1.mobile-products.JPG?raw=true) | ![Product detail mobile view](assets/github/mobile-views/3.mobie-product-detail.JPG?raw=true) |![Cart mobile view](assets/github/mobile-views/4.mobile-cart.JPG?raw=true) |
+| ------------- | ------------- |------------- |
+| ![Orders mobile view](assets/github/mobile-views/5.mobile-orders.JPG?raw=true) | ![Menu mobile view](assets/github/mobile-views/2.mobile-menu.JPG?raw=true) | ![Account mobile view](assets/github/mobile-views/6.mobile-account.JPG?raw=true)
+
+## Desktop Views
+
 
 
