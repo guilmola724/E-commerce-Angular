@@ -3,6 +3,7 @@
 **Responsive** Ecommerce website - Navigate between product pages and add the games you wish to buy to your **cart**. 
 To buy the products in **test** mode first create an **account**, perform the login and then place the **order**.
 Users can also **manage** their **cart**, by updating items quantity and deleting them.
+A **Pagination** strategy was developed to navigate among different product pages.
 The admin of the shop is able to add new products, modify the existing ones, and process the status of customer orders.
 This is a **fullstack** application where the frontend was built with **Angular > 15**, and the backend was developed with **Spring Boot (Java)** and **MySQL**.
 
