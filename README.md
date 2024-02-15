@@ -7,7 +7,8 @@ A **Pagination** strategy was developed to navigate among different product page
 The admin of the shop is able to add new products, modify the existing ones, and process the status of customer orders.
 This is a **fullstack** application where the frontend was built with **Angular > 15**, and the backend was developed with **Spring Boot (Java)** and **MySQL**.
 
-**<ins>NOTE</ins>**: To execute a payment in test mode, please use this card number: 4242424242424242**
+**<ins>NOTE</ins>**: To execute a payment in test mode, please use this test card number: 4242424242424242 (for more informations please check the Stripe docs: https://docs.stripe.com/checkout/quickstart).
+
 
 The backend code and some Angular business logic are private, but if you like the project and are interested in helping me maintaining it and building new features, please feel free to contact me so that we can have a chat about it.
 
@@ -30,5 +31,6 @@ The backend code and some Angular business logic are private, but if you like th
 - **MySQL** database storing: user data, session, cart, products, orders, ...
 - **Robust exception handling**
 - **Robust cart management** in the user session, ensuring **cart integrity** when user logs in/out
+
 
 
